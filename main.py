@@ -1,10 +1,9 @@
 from server import mcp
-from tools.parquet_tools import summarize_parquet_file
-from tools.csv_tools import summarize_csv_file
 
-def main():
-    print("Hello from mix-server!")
+# Import tools so they get registered via decorators
+import tools.csv_tools
+import tools.parquet_tools
 
-
+# Entry point to run the server
 if __name__ == "__main__":
     mcp.run()
